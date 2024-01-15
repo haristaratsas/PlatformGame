@@ -22,9 +22,9 @@ void Player::update(float dt)
 
 void Player::draw()
 {
-
+	animationtimer += 0.05f;
 	if (!graphics::getKeyState(graphics::SCANCODE_D) && !graphics::getKeyState(graphics::SCANCODE_A) && !graphics::getKeyState(graphics::SCANCODE_W)) {
-		int sprite_idle = (int)fmod(100.0f - m_pos_x * 3.0f, m_spritesidle.size());
+		int sprite_idle = (int)fmod(animationtimer, m_spritesidle.size());
 		m_brush_player.texture = m_spritesidle[sprite_idle];
 		graphics::drawRect(m_state->getCanvasWidth() * 0.5f, m_state->getCanvasHeight() * 0.5f, 1.0f, 1.0f, m_brush_player);
 	}
@@ -137,11 +137,11 @@ void Player::movePlayer(float dt)
 	if (graphics::getKeyState(graphics::SCANCODE_D))
 		m_pos_x += (delta_time * velocity);
 		
-	//if (graphics::getKeyState(graphics::SCANCODE_S))
-		//if (m_state->getLevel()->getCollDown()) {
-			//m_vy -= 7.0f;
-		//m_pos_y += 0.3f;
-	//}	
+	/*if (graphics::getKeyState(graphics::SCANCODE_S))
+		if (m_state->getLevel()->getCollDown()) {
+			m_vy -= 7.0f;
+			m_pos_y += 0.3f;
+	*/ 
 		
 	m_vy += delta_time * m_gravity;
 

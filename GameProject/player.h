@@ -28,6 +28,7 @@ public:
 	void draw() override;
 	void init() override;
 	Player(std::string name) : GameObject(name) {}
+	float animationtimer = 0.0f;
 
 protected:
 	void debugDraw();

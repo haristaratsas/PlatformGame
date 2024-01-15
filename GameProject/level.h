@@ -28,6 +28,8 @@ public:
 	float m_center_y = 5.0f;
 	bool isCollidingSideways = false;
 	bool isCollidingDown = false;
+	bool isCollidingSidewaysEnemy = false;
+	bool isCollidingDownEnemy = false;
 
 	// dedicated method to draw a block
 	void drawBlock(int i);
