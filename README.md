@@ -34,7 +34,7 @@
 # Creators Of Starcrane's Odyssey:
 ◾  Dimitrakopoulos Athanasios Zois @ThanosDim1 <br />
 ◾  Lampos Andreas @AndreasLampos <br />
-◾  Taratas Charalampos @haristaratsas <br />
+◾  Taratsas Charalampos @haristaratsas <br />
 
 
 
